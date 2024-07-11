@@ -10,7 +10,7 @@ const contactShema = new Schema({
       required: true,
     },
     email: {
-        type: Schema.Types.email,
+        type: String,
         default: false,
     },
     isFavourite: {

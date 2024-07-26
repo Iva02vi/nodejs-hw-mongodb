@@ -8,6 +8,8 @@ import { authenticate } from '../middlewares/authenticate.js';
 
 export const contactsRouter = Router();
 
+contactsRouter.use(authenticate);
+
 contactsRouter.get('/', ctrlWrapper(getAllContactsController));
 
 contactsRouter.get('/:contactId', isValidId, ctrlWrapper(getContactByIdController));
@@ -17,7 +19,3 @@ contactsRouter.post('/', validateBody(createContactSchema), ctrlWrapper(createCo
 contactsRouter.patch('/:contactId', isValidId, validateBody(updateContactSchema), ctrlWrapper(patchContactController));
 
 contactsRouter.delete('/:contactId', isValidId, ctrlWrapper(deleteContactController));
-
-contactsRouter.use(authenticate);
-
-contactsRouter.get('/', ctrlWrapper(getAllContactsController));

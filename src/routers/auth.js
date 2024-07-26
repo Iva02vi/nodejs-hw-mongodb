@@ -4,7 +4,6 @@ import { loginUserSchema, registerUserSchema } from '../validation/auth.js';
 import { loginUserController, logoutUserController, registerUserController, refreshUserSessionController } from '../controllers/auth.js';
 import { validateBody } from '../middlewares/validateBody.js';
 
-
 export const authRouter = Router();
 
 authRouter.post(

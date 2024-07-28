@@ -23,6 +23,14 @@ const contactShema = new Schema({
     enum: ['work', 'home', 'personal'],
     default: 'personal',
   },
+  userId: {
+    type: Schema.Types.ObjectId,
+    ref: 'users',
+    required: true
+  },
+  photo: {
+    type: String
+  },
 },
   {
     timestamps: true,
@@ -34,4 +42,4 @@ contactShema.post("save", mongooseSaveError);
 
 contactShema.post("findOneAndUpdate", mongooseSaveError);
 
-export const Contact = model("contact", contactShema);
+export const ContactsCollection = model("contact", contactShema);

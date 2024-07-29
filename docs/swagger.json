@@ -77,33 +77,9 @@
           },
           {
             "in": "query",
-            "name": "name",
-            "schema": {
-              "type": "string",
-              "example": "Joe"
-            }
-          },
-          {
-            "in": "query",
-            "name": "phoneNumber",
-            "schema": {
-              "type": "string",
-              "example": "+380123456789"
-            }
-          },
-          {
-            "in": "query",
-            "name": "email",
-            "schema": {
-              "type": "string",
-              "example": "mymail@my.com"
-            }
-          },
-          {
-            "in": "query",
             "name": "isFavorite",
             "schema": {
-              "type": "string",
+              "type": "boolean",
               "example": true
             }
           },
